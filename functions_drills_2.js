@@ -16,7 +16,23 @@ function encode (sentence) {
   return code.join(' ');
 }
 
-console.log(encode('craft block argon meter bells brown croon droop'));
 
+function daysInMonth(month, leapYear=false){
+  let days = 31;
+  switch(month.toLowerCase){            
+  case 'february':
+    days = days - 3 + leapYear;
+    break;
+  case 'june':
+  case 'april':
+  case 'september':
+  case 'november':
+    days= days - 1;
+
+  }
+  return `${month} has ${days} days.`;
+}
+console.log(daysInMonth('november',true));
+console.log(encode('craft block argon meter bells brown croon droop'));
 console.log(jediName('Angel', 'Alicea'));
 console.log(beyond(Infinity),beyond(-Infinity),beyond(1000),beyond(-1000),beyond(0));
