@@ -11,7 +11,12 @@ function beyond (num) {
   return rsp;
 }
 
+function encode (sentence) {
+  let code = sentence.split(' ').map(word => word.charCodeAt(0)>100? ' ':word[word.charCodeAt(0)-96]);
+  return code.join(' ');
+}
 
+console.log(encode('craft block argon meter bells brown croon droop'));
 
 console.log(jediName('Angel', 'Alicea'));
 console.log(beyond(Infinity),beyond(-Infinity),beyond(1000),beyond(-1000),beyond(0));
